@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Player {
@@ -153,6 +154,10 @@ public class GameController : MonoBehaviour {
         SetPlayerColorsInactive();
         startInfo.SetActive(true);
         ResetBoard();
+    }
+
+    public void BackToMenu () {
+        SceneManager.LoadScene("Menu");
     }
 
     void SetBoardInteractable (bool toggle) {
