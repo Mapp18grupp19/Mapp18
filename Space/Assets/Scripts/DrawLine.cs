@@ -15,6 +15,7 @@ public class DrawLine : MonoBehaviour {
 
     void Update () {
         if (Input.GetMouseButtonDown(0)) {
+            mousePressed = true;
             lineRenderer.positionCount = 0;
             vertexList.RemoveRange(0, vertexList.Count);
         }
@@ -27,6 +28,10 @@ public class DrawLine : MonoBehaviour {
                 lineRenderer.positionCount = vertexList.Count;
                 lineRenderer.SetPosition(vertexList.Count - 1, vertexList[vertexList.Count - 1]);
             }
+        }
+
+        if (Input.GetMouseButtonUp(0)) {
+            mousePressed = false;
         }
 	}
 }
