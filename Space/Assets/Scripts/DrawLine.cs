@@ -19,7 +19,6 @@ public class DrawLine : MonoBehaviour {
     }
 
     void Update () {
-        Debug.Log(start);
         if (Input.GetMouseButtonDown(0)) {
             mousePressed = true;
             removeLine();
@@ -52,10 +51,10 @@ public class DrawLine : MonoBehaviour {
     }
 
     public void Finish () {
-        gameController.score++;
         start = false;
         drawing = false;
         removeLine();
+        gameController.FinishLevel();
     }
 
     private void removeLine () {
