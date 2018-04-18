@@ -8,6 +8,7 @@ TagManager:
   - Squiggle
   - StartCircle
   - EndCircle
+  - MiddleCircle
   layers:
   - Default
   - TransparentFX
